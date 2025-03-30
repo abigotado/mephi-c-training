@@ -1,0 +1,15 @@
+.vscode/
+# CMake build artifacts
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+**/Makefile2
+**/lib*.a
+**/build/
+**/*.dir/
+**/*.marks
+**/*.yaml
+**/*.txt
+# Folder with generated archives 
+/archives
