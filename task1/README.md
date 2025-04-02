@@ -8,7 +8,6 @@
 mephi-task1/
 ├── task1/
 ├── armstrong/
-├── sum_of_digits/
 ```
 
 ## Инструкции по сборке и запуску

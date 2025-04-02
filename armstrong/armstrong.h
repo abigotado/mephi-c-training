@@ -5,3 +5,5 @@ typedef enum {
 } NumberStatus;
 
 NumberStatus check_armstrong(int number, int* sum);
+
+int sum_of_digits(int num);

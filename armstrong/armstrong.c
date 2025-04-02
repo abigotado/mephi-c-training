@@ -2,8 +2,6 @@
 #include <math.h>
 #include <stdlib.h>
 #include "armstrong.h"
-#include "../sum_of_digits/sum_of_digits.h"
-
 
 NumberStatus check_armstrong(int number, int* sum) {
     // Отрицательные числа не являются Армстронговыми, 
@@ -38,4 +36,14 @@ NumberStatus check_armstrong(int number, int* sum) {
     } else {
         return NOT_ARMSTRONG;
     }
+}
+
+int sum_of_digits(int num) {
+    int sum = 0;
+    num = abs(num);
+    while (num > 0) {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
 }
