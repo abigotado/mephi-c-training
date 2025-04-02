@@ -1,0 +1,1 @@
+int process_array(int **arr, int *size, int n);
