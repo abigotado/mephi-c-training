@@ -14,7 +14,13 @@ int main() {
     }
     getchar(); // Пропускаем оставшийся символ новой строки
 
-    while ((line = readline("Введите строку (Ctrl+D для завершения): ")) != NULL) {
+    while (1) {
+        line = readline("Введите строку (Ctrl+D для завершения): ");
+        if (!line) {
+            printf("\nЗавершение работы...\n");
+            break;
+        }
+
         char *result = process_string(line, n);
         if (result) {
             printf("Результат: %s\n", result);
@@ -24,4 +30,4 @@ int main() {
     }
 
     return 0;
-} 
+}
