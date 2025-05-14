@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../armstrong/armstrong.h"
+#include "../libs/armstrong/armstrong.h"
 
 int main() {
     int number = 0;

@@ -11,5 +11,10 @@
 **/*.marks
 **/*.yaml
 **/*.txt
+
 # Folder with generated archives 
 /archives
+
+# Ignore .txt files except CMakeLists.txt
+
+!**/CMakeLists.txt

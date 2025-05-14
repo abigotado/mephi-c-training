@@ -21,9 +21,16 @@ mkdir -p "$ARCHIVE_DIR"
 echo "→ Копируем $TASK_NAME..."
 rsync -av --exclude 'build' "$TASK_NAME" "$ARCHIVE_DIR/"
 
+# Создаем директорию libs
+mkdir -p "$ARCHIVE_DIR/libs"
+
 for folder in "$@"; do
   echo "→ Копируем $folder..."
-  rsync -av --exclude 'build' "$folder" "$ARCHIVE_DIR/"
+  if [ "$folder" = "armstrong" ]; then
+    rsync -av --exclude 'build' "libs/$folder" "$ARCHIVE_DIR/libs/"
+  else
+    rsync -av --exclude 'build' "$folder" "$ARCHIVE_DIR/"
+  fi
 done
 
 # Упаковка

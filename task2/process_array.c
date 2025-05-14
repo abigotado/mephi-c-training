@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "process_array.h"
-#include "../armstrong/armstrong.h"
+#include "../libs/armstrong/armstrong.h"
 
 int process_array(int **arr, int *size, int n) {
     int i = 0;
