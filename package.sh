@@ -26,10 +26,14 @@ mkdir -p "$ARCHIVE_DIR/libs"
 
 for folder in "$@"; do
   echo "→ Копируем $folder..."
-  if [ "$folder" = "armstrong" ]; then
+  # Проверяем наличие папки в libs
+  if [ -d "libs/$folder" ]; then
     rsync -av --exclude 'build' "libs/$folder" "$ARCHIVE_DIR/libs/"
-  else
+  # Проверяем наличие папки в корне
+  elif [ -d "$folder" ]; then
     rsync -av --exclude 'build' "$folder" "$ARCHIVE_DIR/"
+  else
+    echo "⚠️  Предупреждение: папка $folder не найдена ни в libs/, ни в корне"
   fi
 done
 
